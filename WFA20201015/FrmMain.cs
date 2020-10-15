@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,12 +15,17 @@ namespace WFA20201015
 {
     public partial class FrmMain : Form
     {
-        static SqlConnection conn; 
+        SqlConnection conn; 
         public FrmMain()
         {
+            AppDomain.CurrentDomain.SetData(
+                "DataDirectory",
+                Path.GetDirectoryName(
+                    Assembly.GetExecutingAssembly()
+                    .Location.Replace(@"bin\Debug", @"\res")));
             conn = new SqlConnection(
                 @"Server = (localdb)\MSSQLLocalDB;" +
-                @"AttachDbFileName=|DataDirectory|\res\turautvonalak.mdf;");
+                @"AttachDbFileName=|DataDirectory|turautvonalak.mdf;");
             InitializeComponent();
         }
         public void DgvFeltolt()
@@ -35,6 +42,17 @@ namespace WFA20201015
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
+        {
+            DgvFeltolt();
+        }
+
+        private void btnUj_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmUjTurazo(conn);
+            frm.ShowDialog();
+        }
+
+        private void btnFrissites_Click(object sender, EventArgs e)
         {
             DgvFeltolt();
         }

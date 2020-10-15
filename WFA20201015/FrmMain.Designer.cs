@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTurazok = new System.Windows.Forms.DataGridView();
-            this.btnUj = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnFrissites = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUj = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFrissites = new System.Windows.Forms.Button();
             this.pbSadCat = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurazok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSadCat)).BeginInit();
@@ -73,36 +73,6 @@
             this.dgvTurazok.Size = new System.Drawing.Size(577, 181);
             this.dgvTurazok.TabIndex = 1;
             // 
-            // btnUj
-            // 
-            this.btnUj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnUj.Location = new System.Drawing.Point(12, 342);
-            this.btnUj.Name = "btnUj";
-            this.btnUj.Size = new System.Drawing.Size(252, 48);
-            this.btnUj.TabIndex = 2;
-            this.btnUj.Text = "Új személy felvétele";
-            this.btnUj.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(12, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(362, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "A nyilvántartásban szereplő túrázók adatai:";
-            // 
-            // btnFrissites
-            // 
-            this.btnFrissites.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnFrissites.Location = new System.Drawing.Point(337, 342);
-            this.btnFrissites.Name = "btnFrissites";
-            this.btnFrissites.Size = new System.Drawing.Size(252, 48);
-            this.btnFrissites.TabIndex = 2;
-            this.btnFrissites.Text = "Adatok frissítése";
-            this.btnFrissites.UseVisualStyleBackColor = true;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Azonosító";
@@ -127,6 +97,38 @@
             // 
             this.Column5.HeaderText = "Telefonszám";
             this.Column5.Name = "Column5";
+            // 
+            // btnUj
+            // 
+            this.btnUj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnUj.Location = new System.Drawing.Point(12, 342);
+            this.btnUj.Name = "btnUj";
+            this.btnUj.Size = new System.Drawing.Size(252, 48);
+            this.btnUj.TabIndex = 2;
+            this.btnUj.Text = "Új személy felvétele";
+            this.btnUj.UseVisualStyleBackColor = true;
+            this.btnUj.Click += new System.EventHandler(this.btnUj_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(12, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(362, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "A nyilvántartásban szereplő túrázók adatai:";
+            // 
+            // btnFrissites
+            // 
+            this.btnFrissites.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnFrissites.Location = new System.Drawing.Point(337, 342);
+            this.btnFrissites.Name = "btnFrissites";
+            this.btnFrissites.Size = new System.Drawing.Size(252, 48);
+            this.btnFrissites.TabIndex = 2;
+            this.btnFrissites.Text = "Adatok frissítése";
+            this.btnFrissites.UseVisualStyleBackColor = true;
+            this.btnFrissites.Click += new System.EventHandler(this.btnFrissites_Click);
             // 
             // pbSadCat
             // 
